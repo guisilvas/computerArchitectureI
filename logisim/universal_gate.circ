@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.16.1.4.jar" version="1.0">
+  This file is intended to be loaded by Logisim http://logisim.altervista.org
+
+  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#TTL" name="2"/>
+  <lib desc="#Plexers" name="3">
+    <tool name="Multiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Demultiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Decoder">
+      <a name="enable" val="false"/>
+    </tool>
+  </lib>
+  <lib desc="#Arithmetic" name="4"/>
+  <lib desc="#Memory" name="5">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="6"/>
+  <lib desc="#Base" name="7">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="Dialog plain 12"/>
+      <a name="color" val="#000000"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="NOT"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="7" map="Button2" name="Poke Tool"/>
+    <tool lib="7" map="Button3" name="Menu Tool"/>
+    <tool lib="7" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="7" name="Poke Tool"/>
+    <tool lib="7" name="Edit Tool"/>
+    <sep/>
+    <tool lib="7" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="Dialog plain 12"/>
+      <a name="color" val="#000000"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="NOT">
+    <a name="circuit" val="NOT"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(100,140)" to="(110,140)"/>
+    <wire from="(90,150)" to="(100,150)"/>
+    <wire from="(100,160)" to="(110,160)"/>
+    <wire from="(100,140)" to="(100,150)"/>
+    <wire from="(100,150)" to="(100,160)"/>
+    <wire from="(150,150)" to="(170,150)"/>
+    <comp lib="7" loc="(146,136)" name="Text">
+      <a name="text" val="~A"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(106,24)" name="Text">
+      <a name="text" val="NOT"/>
+    </comp>
+    <comp lib="0" loc="(90,150)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+      <a name="labelloc" val="west"/>
+    </comp>
+    <comp lib="7" loc="(92,80)" name="Text">
+      <a name="text" val="S0 = ~(AA) "/>
+    </comp>
+    <comp lib="7" loc="(98,129)" name="Text">
+      <a name="text" val="A"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="1" loc="(150,150)" name="NAND Gate"/>
+    <comp lib="7" loc="(179,133)" name="Text">
+      <a name="text" val="~A"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(97,179)" name="Text">
+      <a name="text" val="A"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="0" loc="(170,150)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="s0"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(160,20)" name="NOT Gate"/>
+    <comp lib="7" loc="(122,50)" name="Text">
+      <a name="text" val="NAND(A,A) = NOT(A)"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(83,100)" name="Text">
+      <a name="text" val="S0 = ~A"/>
+    </comp>
+  </circuit>
+  <circuit name="AND">
+    <a name="circuit" val="AND"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(80,210)" to="(80,220)"/>
+    <wire from="(80,180)" to="(80,190)"/>
+    <wire from="(80,190)" to="(100,190)"/>
+    <wire from="(80,210)" to="(100,210)"/>
+    <wire from="(70,220)" to="(80,220)"/>
+    <wire from="(70,180)" to="(80,180)"/>
+    <wire from="(140,200)" to="(170,200)"/>
+    <wire from="(170,190)" to="(170,200)"/>
+    <wire from="(170,190)" to="(190,190)"/>
+    <wire from="(170,200)" to="(170,210)"/>
+    <wire from="(170,210)" to="(190,210)"/>
+    <wire from="(230,200)" to="(290,200)"/>
+    <comp lib="7" loc="(98,235)" name="Text">
+      <a name="text" val="B"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(72,125)" name="Text">
+      <a name="text" val="S0 = ~(~(AB))"/>
+    </comp>
+    <comp lib="0" loc="(290,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="s0"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(70,220)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+      <a name="labelloc" val="west"/>
+    </comp>
+    <comp lib="1" loc="(230,200)" name="NAND Gate"/>
+    <comp lib="1" loc="(160,30)" name="AND Gate"/>
+    <comp lib="7" loc="(88,104)" name="Text">
+      <a name="text" val="S0 = ~(~(AB)~(AB))"/>
+    </comp>
+    <comp lib="7" loc="(230,185)" name="Text">
+      <a name="text" val="AB"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(123,70)" name="Text">
+      <a name="text" val="NAND(NAND(A,B)) = AND(A,B)"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(96,34)" name="Text">
+      <a name="text" val="AND"/>
+    </comp>
+    <comp lib="7" loc="(99,173)" name="Text">
+      <a name="text" val="A"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(248,168)" name="Text">
+      <a name="text" val="Dupla negação*"/>
+      <a name="font" val="Dialog italic 8"/>
+    </comp>
+    <comp lib="7" loc="(190,234)" name="Text">
+      <a name="text" val="~(AB)"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="0" loc="(70,180)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+      <a name="labelloc" val="west"/>
+    </comp>
+    <comp lib="7" loc="(58,147)" name="Text">
+      <a name="text" val="S0 = AB"/>
+    </comp>
+    <comp lib="7" loc="(302,183)" name="Text">
+      <a name="text" val="AB"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(191,176)" name="Text">
+      <a name="text" val="~(AB)"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(134,181)" name="Text">
+      <a name="text" val="~(AB)"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="1" loc="(140,200)" name="NAND Gate"/>
+  </circuit>
+  <circuit name="OR">
+    <a name="circuit" val="OR"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(70,290)" to="(90,290)"/>
+    <wire from="(70,210)" to="(70,220)"/>
+    <wire from="(70,290)" to="(70,300)"/>
+    <wire from="(70,300)" to="(70,310)"/>
+    <wire from="(70,200)" to="(70,210)"/>
+    <wire from="(70,310)" to="(90,310)"/>
+    <wire from="(70,220)" to="(90,220)"/>
+    <wire from="(70,200)" to="(90,200)"/>
+    <wire from="(130,300)" to="(150,300)"/>
+    <wire from="(130,210)" to="(150,210)"/>
+    <wire from="(60,300)" to="(70,300)"/>
+    <wire from="(60,210)" to="(70,210)"/>
+    <wire from="(150,210)" to="(150,240)"/>
+    <wire from="(150,240)" to="(170,240)"/>
+    <wire from="(150,260)" to="(150,300)"/>
+    <wire from="(150,260)" to="(170,260)"/>
+    <wire from="(210,250)" to="(240,250)"/>
+    <comp lib="7" loc="(96,34)" name="Text">
+      <a name="text" val="OR"/>
+    </comp>
+    <comp lib="1" loc="(130,300)" name="NAND Gate"/>
+    <comp lib="0" loc="(60,210)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+      <a name="labelloc" val="west"/>
+    </comp>
+    <comp lib="7" loc="(88,243)" name="Text">
+      <a name="text" val="A"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(251,233)" name="Text">
+      <a name="text" val="A+B"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(127,195)" name="Text">
+      <a name="text" val="~A"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(89,277)" name="Text">
+      <a name="text" val="B"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(65,147)" name="Text">
+      <a name="text" val="S0 = A+B"/>
+    </comp>
+    <comp lib="7" loc="(180,225)" name="Text">
+      <a name="text" val="~(~A~B)"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="0" loc="(240,250)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="s0"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="7" loc="(91,104)" name="Text">
+      <a name="text" val="S0 = ~(~(AA)~(BB))"/>
+    </comp>
+    <comp lib="7" loc="(215,240)" name="Text">
+      <a name="text" val="A+B"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(127,290)" name="Text">
+      <a name="text" val="~B"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="1" loc="(170,30)" name="OR Gate"/>
+    <comp lib="7" loc="(137,69)" name="Text">
+      <a name="text" val="NAND(NAND(A,A),NAND(B,B)) = OR(A,B)"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(185,205)" name="Text">
+      <a name="text" val="De Morgan*"/>
+      <a name="font" val="Dialog italic 8"/>
+    </comp>
+    <comp lib="7" loc="(89,335)" name="Text">
+      <a name="text" val="B"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(90,184)" name="Text">
+      <a name="text" val="A"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="1" loc="(130,210)" name="NAND Gate"/>
+    <comp lib="0" loc="(60,300)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+      <a name="labelloc" val="west"/>
+    </comp>
+    <comp lib="7" loc="(76,125)" name="Text">
+      <a name="text" val="S0 = ~(~A~B)"/>
+    </comp>
+    <comp lib="1" loc="(210,250)" name="NAND Gate"/>
+  </circuit>
+</project>
